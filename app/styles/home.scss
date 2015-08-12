@@ -2,16 +2,36 @@
 .navbar-inverse {
 	margin-bottom: 0px;
 	z-index: 3;
-	background-color: transparent;
+	background-color: transparent;	
+	border-color: transparent;
+
+	.navbar-nav {
+		li {
+			a {
+				color: #ffffff;
+		    font-size: 12px;
+		    text-transform: uppercase;
+		    font-weight: 400;
+		    padding: 30px 20px;
+		    letter-spacing: 1px;
+			}
+
+			&.active, &.active:hover {
+				a {
+					background-color: transparent;
+				}
+			}
+		}
+	}
 }
 .banner {
-	height: 100%;
+	background: url('../img/banner-2.png') center;
+	background-size: cover;
+	height: 100vh;
 	width: 100%;
 	position: relative;
 	display: table;
 	z-index: 1;
-	background: url('../img/banner-2.png') center;
-	background-size: cover;
 
 	.overlay {
 		position: absolute;
