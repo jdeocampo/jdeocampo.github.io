@@ -1,0 +1,36 @@
+{
+  "name": "jdeocampo.github.io",
+  "version": "0.0.0",
+  "authors": [
+    "Jelly de Ocampo <jellydeocampo@icloud.com>"
+  ],
+  "description": "Personal portfolio",
+  "keywords": [
+    "personal",
+    "portfolio",
+    "jelly",
+    "de",
+    "ocampo",
+    "imjellyd",
+    "jdeocampo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "animate.css": "~3.4.0",
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.4.0",
+    "angular": "~1.4.3",
+    "angular-resource": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "angular-animate": "~1.4.3",
+    "bootstrap-sass-official": "~3.3.5"
+  }
+}
