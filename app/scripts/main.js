@@ -2,8 +2,9 @@
 
   'use strict';
 
-  angular.module('imjellydApp', ['ngRoute', 'ngAnimate'])
+  var typewriteDirective = require('./directives/imjellyd-typewrite'); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
+  angular.module('imjellydApp', ['ngRoute', 'ngAnimate'])
   .config([
     '$locationProvider',
     '$routeProvider',
@@ -24,6 +25,8 @@
   //Load controller
   .controller('MainController', function($scope) {
       $scope.test = "Testing...";
-  });
+  })
+
+  .directive('typewrite',['$timeout', typewriteDirective]);
 
 }());

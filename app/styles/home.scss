@@ -14,6 +14,7 @@ $sec-color: #FF9800;
 
 	@media screen and (max-width: $break-small) {
     background-color: white;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
    }
 
 	.navbar-nav {
@@ -34,12 +35,12 @@ $sec-color: #FF9800;
 			}
 			@media screen and (max-width: $break-small) {
     		a {
-					color: black;
+					color: $dark-blue;
 			    font-size: 12px;
 			    text-transform: uppercase;
 			    font-weight: 400;
-			    padding: 30px 20px;
 			    letter-spacing: 1px;
+			    padding: 15px 20px;
 			    &:hover {
 			    	background-color:	 $sec-color;
 						color: $light-color;
@@ -77,13 +78,17 @@ $sec-color: #FF9800;
     line-height: 0px;
     width: 100px;
     height: 40px;
-    background: url("../img/logo-40x100.png") no-repeat center;
+    background: url("../img/logo-40x40.png") no-repeat center;
     margin: 20px 0px;
 
     @media screen and (max-width: $break-small) {
     	margin-left: 20px;
     	background: url("../img/logo-dark-40x100.png") no-repeat center;
     }
+	}
+
+	.navbar-collapse {
+		border-color: #dddddd;
 	}
 }
 .banner {
@@ -129,6 +134,17 @@ $sec-color: #FF9800;
     	width: 80%;
     	text-align: center;
     	margin: 0 auto;
+    	min-height: 40px;
+    	h1 {
+    		font-weight: 700;
+		    font-size: 40px;
+		    color: #ffffff;
+		    margin-top: 0px;
+		    text-transform: uppercase;
+		    font-weight: 300;
+		    letter-spacing: 10px;
+		    display: inline-block;
+    	}
     }
 
     .buttons {

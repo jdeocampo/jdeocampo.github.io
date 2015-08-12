@@ -1,11 +1,148 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+'use strict';
+
+var typewriteDirective = function ($timeout) {
+  function linkFunction($scope, $element, $attrs) {
+      var timer = null,
+          initialDelay = $attrs.initialDelay ? getTypeDelay($attrs.initialDelay) : 200,
+          typeDelay = $attrs.typeDelay || 200,
+          eraseDelay = $attrs.eraseDelay || typeDelay / 2,
+          blinkDelay = $attrs.blinkDelay ? getAnimationDelay($attrs.blinkDelay) : false,
+          cursor = $attrs.cursor || '|',
+          blinkCursor = typeof $attrs.blinkCursor !== 'undefined' ? $attrs.blinkCursor === 'true' : true,
+          currentText,
+          textArray,
+          running,
+          auxStyle;
+
+      if ($scope.text) {
+          if ($scope.text instanceof Array) {
+              textArray = $scope.text;
+              currentText = textArray[0];
+          } else {
+              currentText = $scope.text;
+          }
+      }
+      if (typeof $scope.start === 'undefined' || $scope.start) {
+          typewrite();
+      }
+
+      function typewrite() {
+          timer = $timeout(function () {
+              updateIt($element, 0, 0, currentText);
+          }, initialDelay);
+      }
+
+      function updateIt(element, charIndex, arrIndex, text) {
+          if (charIndex <= text.length) {
+              element.html(text.substring(0, charIndex) + cursor);
+              charIndex++;
+              timer = $timeout(function () {
+                  updateIt(element, charIndex, arrIndex, text);
+              }, typeDelay);
+              return;
+          } else {
+              charIndex--;
+              // check if it's an array
+              if (textArray && arrIndex < textArray.length - 1) {
+                  timer = $timeout(function () {
+                      cleanAndRestart(element, charIndex, arrIndex, textArray[arrIndex]);
+                  }, initialDelay);
+              } else {
+                  if ($scope.callbackFn) {
+                      $scope.callbackFn();
+                  }
+                  blinkIt(element, charIndex, currentText);
+              }
+          }
+      }
+
+      function blinkIt(element, charIndex) {
+          var text = element.text().substring(0, element.text().length - 1);
+          if (blinkCursor) {
+              if (blinkDelay) {
+                  auxStyle = '-webkit-animation:blink-it steps(1) ' + blinkDelay + ' infinite;-moz-animation:blink-it steps(1) ' + blinkDelay + ' infinite ' +
+                      '-ms-animation:blink-it steps(1) ' + blinkDelay + ' infinite;-o-animation:blink-it steps(1) ' + blinkDelay + ' infinite; ' +
+                      'animation:blink-it steps(1) ' + blinkDelay + ' infinite;';
+                  element.html(text.substring(0, charIndex) + '<span class="blink" style="' + auxStyle + '">' + cursor + '</span>');
+              } else {
+                  element.html(text.substring(0, charIndex) + '<span class="blink">' + cursor + '</span>');
+              }
+          } else {
+              element.html(text.substring(0, charIndex));
+          }
+      }
+
+      function cleanAndRestart(element, charIndex, arrIndex, currentText) {
+          if (charIndex > 0) {
+              currentText = currentText.slice(0, -1);
+              // element.html(currentText.substring(0, currentText.length - 1) + cursor);
+              element.html(currentText + cursor);
+              charIndex--;
+              timer = $timeout(function () {
+                  cleanAndRestart(element, charIndex, arrIndex, currentText);
+              }, eraseDelay);
+              return;
+          } else {
+              arrIndex++;
+              currentText = textArray[arrIndex];
+              timer = $timeout(function () {
+                  updateIt(element, 0, arrIndex, currentText);
+              }, typeDelay);
+          }
+      }
+
+      function getTypeDelay(delay) {
+          if (typeof delay === 'string') {
+              return delay.charAt(delay.length - 1) === 's' ? parseInt(delay.substring(0, delay.length - 1), 10) * 1000 : +delay;
+          } else {
+              return false;
+          }
+      }
+
+      function getAnimationDelay(delay) {
+          if (typeof delay === 'string') {
+              return delay.charAt(delay.length - 1) === 's' ? delay : parseInt(delay.substring(0, delay.length - 1), 10) / 1000;
+          }
+      }
+
+      $scope.$on('$destroy', function () {
+          if (timer) {
+              $timeout.cancel(timer);
+          }
+      });
+
+      $scope.$watch('start', function (newVal) {
+          if (!running && newVal) {
+              running = !running;
+              typewrite();
+          }
+      });
+  }
+
+  return {
+      restrict: 'A',
+      link: linkFunction,
+      scope: {
+          text: '=',
+          callbackFn: '&',
+          start: '='
+      }
+  };
+};
+
+module.exports = typewriteDirective;
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/directives/imjellyd-typewrite.js","/directives")
+},{"buffer":3,"oMfpAn":6}],2:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 (function () {
 
   'use strict';
 
-  angular.module('imjellydApp', ['ngRoute', 'ngAnimate'])
+  var typewriteDirective = require('./directives/imjellyd-typewrite'); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
+  angular.module('imjellydApp', ['ngRoute', 'ngAnimate'])
   .config([
     '$locationProvider',
     '$routeProvider',
@@ -26,11 +163,13 @@
   //Load controller
   .controller('MainController', function($scope) {
       $scope.test = "Testing...";
-  });
+  })
+
+  .directive('typewrite',['$timeout', typewriteDirective]);
 
 }());
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_51c5b493.js","/")
-},{"buffer":2,"oMfpAn":5}],2:[function(require,module,exports){
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_70469311.js","/")
+},{"./directives/imjellyd-typewrite":1,"buffer":3,"oMfpAn":6}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1143,7 +1282,7 @@ function assert (test, message) {
 }
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/index.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer")
-},{"base64-js":3,"buffer":2,"ieee754":4,"oMfpAn":5}],3:[function(require,module,exports){
+},{"base64-js":4,"buffer":3,"ieee754":5,"oMfpAn":6}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
@@ -1271,7 +1410,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib/b64.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/base64-js/lib")
-},{"buffer":2,"oMfpAn":5}],4:[function(require,module,exports){
+},{"buffer":3,"oMfpAn":6}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -1359,7 +1498,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754/index.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/buffer/node_modules/ieee754")
-},{"buffer":2,"oMfpAn":5}],5:[function(require,module,exports){
+},{"buffer":3,"oMfpAn":6}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 
@@ -1426,4 +1565,4 @@ process.chdir = function (dir) {
 };
 
 }).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/process/browser.js","/../../node_modules/gulp-browserify/node_modules/browserify/node_modules/process")
-},{"buffer":2,"oMfpAn":5}]},{},[1])
+},{"buffer":3,"oMfpAn":6}]},{},[2])
