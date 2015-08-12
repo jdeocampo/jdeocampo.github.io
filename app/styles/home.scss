@@ -1,14 +1,25 @@
 // home.scss
+
+$break-small: 767px;
+$break-large: 1200px;
+$dark-blue: #263248;
+$light-color: #fff;
+$sec-color: #FF9800;
+
 .navbar-inverse {
 	margin-bottom: 0px;
 	z-index: 3;
 	background-color: transparent;	
 	border-color: transparent;
 
+	@media screen and (max-width: $break-small) {
+    background-color: white;
+   }
+
 	.navbar-nav {
 		li {
 			a {
-				color: #ffffff;
+				color: $light-color;
 		    font-size: 12px;
 		    text-transform: uppercase;
 		    font-weight: 400;
@@ -21,7 +32,58 @@
 					background-color: transparent;
 				}
 			}
+			@media screen and (max-width: $break-small) {
+    		a {
+					color: black;
+			    font-size: 12px;
+			    text-transform: uppercase;
+			    font-weight: 400;
+			    padding: 30px 20px;
+			    letter-spacing: 1px;
+			    &:hover {
+			    	background-color:	 $sec-color;
+						color: $light-color;
+			    }
+				}
+				&.active, &.active:hover {
+					a {
+						color: $sec-color;
+					}
+				}
+   		}
 		}
+	}
+
+	.navbar-toggle {
+		margin-top: 22px;
+		background-color: white;
+		border-color: $sec-color;
+		.icon-bar {
+			background-color: $sec-color;
+		}
+		
+		&:hover, &:focus {
+			background-color: $sec-color;
+			.icon-bar {
+				background-color: $light-color;
+			}
+		}
+		
+	}
+
+	.navbar-brand {
+    color: #ffffff;
+    padding: 0px;
+    line-height: 0px;
+    width: 100px;
+    height: 40px;
+    background: url("../img/logo-40x100.png") no-repeat center;
+    margin: 20px 0px;
+
+    @media screen and (max-width: $break-small) {
+    	margin-left: 20px;
+    	background: url("../img/logo-dark-40x100.png") no-repeat center;
+    }
 	}
 }
 .banner {
@@ -47,7 +109,7 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    color: #ffffff;
+    color: $light-color;
 
     .subtitle {
     	text-align: center;
@@ -81,7 +143,7 @@
 	    font-weight: 700;
 	    border: 0px;
 	    padding: 10px 5px;
-	    border-bottom: 1px solid #ffffff;
+	    border-bottom: 1px solid $light-color;
     }
 
     .scroll-info {
