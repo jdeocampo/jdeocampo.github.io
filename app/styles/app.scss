@@ -48,6 +48,11 @@ body {
 
   width: 100% !important;
 }
+@media (max-width: 768px) {
+    .affix {
+        position: static;
+    }
+}
 .def-btn {
 	display: inline-block;
   padding: 14px 28px 13px 28px;
