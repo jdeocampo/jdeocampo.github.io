@@ -167,6 +167,35 @@ $sec-color: #FF9800;
 	    bottom: 15%;
 	    text-align: center;
 	    width: 100%;
+	    a {
+	    	color: $light-color;
+	    	.shape {
+	    		display: inline-block;
+			    border: 1px solid #ffffff;
+			    width: 35px;
+			    height: 35px;
+			    transform: rotate(45deg);
+			    -webkit-transform: rotate(45deg);
+			    -moz-transform: rotate(45deg);
+			    -o-transform: rotate(45deg);
+			    -ms-transform: rotate(45deg);
+			    -webkit-transition: all 0.3s ease-in-out;
+			    -moz-transition: all 0.3s ease-in-out;
+			    -ms-transition: all 0.3s ease-in-out;
+			    -o-transition: all 0.3s ease-in-out;
+			    text-align: center;
+			    position: relative;
+			    z-index: 3;
+			    i {
+			    	transform: rotate(-45deg);
+    				-webkit-transform: rotate(-45deg);
+    				padding: 8px;
+				    font-size: 18px;
+				    color: #ffffff;
+			    }
+	    	}
+	    }
+	    
     }
 	}
 }

@@ -1,0 +1,83 @@
+// about.scss
+
+$break-small: 767px;
+$break-large: 1200px;
+$dark-blue: #263248;
+$light-color: #fff;
+$sec-color: #FF9800;
+
+.about {
+	padding: 80px 0;
+
+	.photo {
+		text-align: center;
+    margin: 75px 0px 40px;
+	}
+
+	.social-icons {
+		overflow: hidden;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+
+		ul {
+			margin: 0;
+			li {
+				&.socials {
+					width: 100px;
+			    height: 100px;
+			    background-color: #444444;
+			    color: #FFFFFF;
+			    text-align: center;
+			    font-size: 52px;
+			    line-height: 52px;
+			    font-weight: bold;
+			    list-style-type: none;
+			    float: left;
+			    margin: 0;
+			    padding: 0;
+
+			    &.fb-bg {
+			    	background-color: #3B5998;
+			    }
+			    &.tweet-bg {
+			    	background-color: #9AE4E8;
+			    }
+			    &.google-bg {
+			    	background-color: #DD4B39;
+			    }
+			    &.pin-bg {
+			    	background-color: #BD1E23;
+			    }
+			    &.git-bg {
+			    	background-color: #252525;
+			    }
+			    &.yt-bg {
+			    	background-color: #DD4B39;
+			    }
+			    &.so-bg {
+			    	background-color: #e14107;
+			    }
+			    &.down-bg {
+			    	background-color: #000000;
+			    }
+			    &.lrg {
+			    	    width: 180px;
+			    }
+
+			    a {
+			    	color: #fff;
+				    text-decoration: none;
+				    display: block;
+				    margin: 20px;
+				    overflow: hidden;
+				    -webkit-transition: all ease 0.8s;
+				    -moz-transition: all ease 0.8s;
+				    transition: all ease 0.8s;
+			    }
+				}
+			}
+		}
+		
+	}
+}

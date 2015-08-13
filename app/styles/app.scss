@@ -1,5 +1,10 @@
 $font-stack:    Lato, sans-serif;
 $primary-color: #333;
+$break-small: 767px;
+$break-large: 1200px;
+$dark-blue: #263248;
+$light-color: #fff;
+$sec-color: #FF9800;
 
 body {
   font-family: $font-stack;
@@ -18,6 +23,31 @@ body {
   }
 }
 
+.affix {
+  .navbar-inverse {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    background-color: white !important;
+    width: 100% !important;
+    color: $primary-color !important;
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    .navbar-nav {
+      li {
+        a {
+          color: $dark-blue;
+        }
+      }
+    }
+    .navbar-brand {
+      background: url("../img/logo-dark-40x40.png") no-repeat center;
+    }
+  }
+
+  width: 100% !important;
+}
 .def-btn {
 	display: inline-block;
   padding: 14px 28px 13px 28px;
@@ -30,4 +60,30 @@ body {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+}
+
+.section-title {
+  position: relative;
+
+  h1 {
+    font-weight: 400;
+    padding-top: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+  }
+
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: none;
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 10px;
+    display: block;
+    letter-spacing: 2px;
+    width: 100%;
+    text-transform: uppercase;
+    color: $sec-color;
+
+  }
 }

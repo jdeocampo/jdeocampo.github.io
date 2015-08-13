@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./dist/bower_components/fontawesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="./dist/bower_components/animate.css/animate.css"/>
     <link rel="stylesheet" href="./dist/css/style.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick-theme.css"/>
 
     <!-- fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
@@ -18,29 +20,31 @@
   </head>
   <body>
     <!-- .navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"></a>
+    <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#home">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#education">Experience</a></li>
+              <li><a href="#news">Journal</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#education">Experience</a></li>
-            <li><a href="#news">Journal</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div><!--/.nav -->
+      </div><!--/.nav -->
+    </div>
     <!-- .banner -->
     <section class="banner" id="home">
       <div class="overlay"></div>
@@ -51,7 +55,7 @@
               <p>I am Jelly de Ocampo</p>
             </div>
             <div class="title">
-              <h1 id="typed" typewrite text="['PASSIONATE FULLSTACK DEVELOPER', 'EXCELLENT FRONTEND DEVELOPER', 'LEAD DEVELOPER', 'TRAVELLER' ]" initial-delay="3s" type-delay="100" erase-delay="50"></h1>
+              <h1 id="typed" typewrite text="['PASSIONATE FULLSTACK DEVELOPER', 'EXCELLENT FRONTEND DEVELOPER', 'LEAD DEVELOPER' ]" initial-delay="3s" type-delay="100" erase-delay="50"></h1>
             </div>
             <div class="buttons">
               <a href="#" class="def-btn" target="_blank">Contact Me</a>
@@ -72,11 +76,84 @@
       </div>
     </section>
     <!-- /.banner -->
-    <div>fda</div>
+    <!-- .about -->
+    <section class="about" id="about">
+      <div class="title section-title text-center">
+        <h1>Jelly de Ocampo </h1>
+        <h2>Fullstack developer</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="center">
+                <div class="photo"><h3>1</h3></div>
+                <div class="photo"><h3>2</h3></div>
+                <div class="photo"><h3>3</h3></div>
+                <div class="photo"><h3>4</h3></div>
+                <div class="photo"><h3>5</h3></div>
+                <div class="photo"><h3>6</h3></div>
+              </div>
+              <div class="description">
+                <div class="text">
+                  <p>I Am Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec efficitur ipsum. In id feugiat nibh. Proin viverra metus vel orci eleifend eleifend. Duis eu magna ac nisi accumsan viverra ac eu massa. Aenean fermentum at mi vel suscipit. Aenean hendrerit lorem vel magna lobortis volutpat. Proin auctor convallis quam sit amet ullamcorper.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                            <div class="social-icons">
+                <ul>
+                  <li class="socials fb-bg">
+                    <a href="#" target="_blank" title="Facebook">
+                      <i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li class="socials tweet-bg">
+                    <a href="#" target="_blank" title="Twitter">
+                      <i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="socials google-bg">
+                    <a href="#" target="_blank" title="Google">
+                      <i class="fa fa-google"></i></a>
+                  </li>
+                  <li class="socials pin-bg">
+                    <a href="#" target="_blank" title="Pinterest">
+                      <i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li class="socials git-bg">
+                    <a href="#" target="_blank" title="Github">
+                      <i class="fa fa-git"></i></a>
+                  </li>
+                  <li class="socials so-bg">
+                    <a href="#" target="_blank" title="Stack Overflow">
+                      <i class="fa fa-stack-overflow"></i></a>
+                  </li>
+                  <li class="socials email-bg">
+                    <a href="#" target="_blank" title="Email">
+                      <i class="fa fa-envelope-o"></i></a>
+                  </li>
+                  <li class="socials yt-bg">
+                    <a href="#" target="_blank" title="Youtube">
+                      <i class="fa fa-youtube"></i></a>
+                  </li>
+                  
+                  
+                  <li class="socials down-bg">
+                    <a href="#" target="_blank" title="Download">
+                      <i class="fa fa-download"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.about -->
 
     <!-- scripts -->
     <script src="./dist/bower_components/jquery/dist/jquery.js"></script>
     <script src="./dist/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
     <script src="./dist/bower_components/angular/angular.js"></script>
     <script src="./dist/bower_components/angular-resource/angular-resource.js"></script>
     <script src="./dist/bower_components/angular-route/angular-route.js"></script>
