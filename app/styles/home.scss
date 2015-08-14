@@ -129,6 +129,12 @@ $sec-color: #FF9800;
 	    position: relative;
 	    margin-bottom: 15px;
     }
+    @media screen and (max-width: $break-small) {
+    	.subtitle {
+    		font-size: 18px;
+    	}
+    }
+
 
     .title {
     	width: 80%;
@@ -144,7 +150,13 @@ $sec-color: #FF9800;
 		    font-weight: 300;
 		    letter-spacing: 10px;
 		    display: inline-block;
+
     	}
+    	@media screen and (max-width: $break-small) {
+    		h1 {
+    			font-size: 30px;
+    		}
+			}
     }
 
     .buttons {
