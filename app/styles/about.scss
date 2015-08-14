@@ -25,6 +25,7 @@ $sec-color: #FF9800;
 			display: inline-block;
 			padding: 0;
 			li {
+
 				&.socials {
 					width: 100px;
 			    height: 100px;
@@ -78,6 +79,24 @@ $sec-color: #FF9800;
 				    transition: all ease 0.8s;
 			    }
 				}
+				@media only screen and (max-width: 320px) {
+					&.socials {
+						width: 70px;
+						height: 70px;
+						font-size: 22px;
+						line-height: 22px;
+					}
+				}
+				@media only screen and (min-width: 321px) and (max-width: $break-small) {
+					&.socials {
+						width: 80px;
+						height: 80px;
+						font-size: 32px;
+						line-height: 32px;
+					}
+				}
+				
+				
 			}
 		}
 		
