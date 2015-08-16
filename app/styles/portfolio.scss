@@ -1,5 +1,10 @@
 // portfolio.scss
 
+$break-small: 767px;
+$break-large: 1200px;
+$dark-blue: #263248;
+$light-color: #fff;
+$sec-color: #FF9800;
 .portfolio {
 	padding-top: 80px;
 
@@ -48,5 +53,25 @@
 			}
 		}
 	}
+	.show-more {
+		&:before {
+			content: "";
+	    width: 100%;
+	    position: absolute;
+	    top: 50%;
+	    border-top: 2px solid #e5e5e5;
+	    left: 0;
+		}
+		.def-btn {
+			padding: 0px 15px;
+    background: #fff;
+    color: #888;
+    position: relative;
+    font-size: 14px;
+			color: $dark-blue;
+			text-decoration: none;
+		}
+	}
+	
 }
 

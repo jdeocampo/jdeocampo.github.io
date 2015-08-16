@@ -9,13 +9,16 @@ $sec-color: #FF9800;
 .about {
 	padding-top: 80px;
 
-	.photo {
+
+	.photo-primary {
 		text-align: center;
-    margin: 75px 0px 40px;
+		img {
+    	max-width: 70%;
+		}
 	}
 
 	.description {
-		padding: 80px 0;
+		padding: 60px 0;
 	}
 
 	.social-icons {
@@ -23,6 +26,7 @@ $sec-color: #FF9800;
     -webkit-transition: all ease 0.8s;
     -moz-transition: all ease 0.8s;
     transition: all ease 0.8s;
+    margin-top: 80px;
     margin-bottom: 80px;
 
 		ul {
