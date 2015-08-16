@@ -23,6 +23,30 @@ body {
   }
 }
 
+.footer {
+  font-family: "Lato", sans-serif;
+  border-top: 5px solid $sec-color;
+  text-align: center;
+  padding-bottom: 40px;
+  overflow: hidden;
+  width: 100%;
+  background: #222;
+  color: $light-color;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 30px 20px;
+  letter-spacing: 1px;
+
+  .container {
+    margin-top: 40px;
+
+    img {
+      margin-bottom:20px;
+    }
+  }
+}
+
 .affix {
   .navbar-inverse {
     position: fixed !important;

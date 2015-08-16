@@ -1,0 +1,75 @@
+// experience.scss
+
+$break-small: 767px;
+$break-large: 1200px;
+$dark-blue: #263248;
+$light-color: #fff;
+$sec-color: #FF9800;
+
+.resume {
+	margin: 80px 0;
+	
+	.title {
+		background-color: #eee;
+		padding: 40px 0;
+		border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    &.bottom-shape:before {
+    	content: "";
+	    position: absolute;
+	    width: 20px;
+	    height: 20px;
+	    background: #f0f0f0;
+	    border-right: 1px solid #ebebeb;
+	    border-bottom: 1px solid #ebebeb;
+	    z-index: 1;
+	    bottom: -10px;
+	    left: 50%;
+	    margin-left: -10px;
+	    transform: rotate(45deg);
+	    -webkit-transform: rotate(45deg);
+	    -moz-transform: rotate(45deg);
+	    -o-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+    }
+	}
+
+	.list-experience {
+		padding: 80px 0;
+		.item {
+			margin: 10px 0;
+			
+			h2 {
+				font-family: "Oswald";
+				font-weight: 350;
+		    font-size: 13px;
+		    text-transform: uppercase;
+		    text-align: left;
+		    border-bottom: 1px solid #212121;
+		    margin-bottom: 33px;
+		    padding-bottom: 7px;
+		    letter-spacing: 2px;
+
+		    .data {
+			    float: right;
+			    font-style: italic;
+		    }
+			}
+			.experience-li {
+				color: #616265;
+		    letter-spacing: 1px;
+			}
+
+			.tags {
+				padding: 0;
+				.tag-item {
+					display: inline-block;
+					list-style-type: none;
+			    text-decoration: none;
+			    margin-right: 4px;
+				}
+			}
+		}
+	}
+
+}
