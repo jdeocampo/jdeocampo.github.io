@@ -1,3 +1,9 @@
+
+$break-small: 767px;
+$break-large: 1200px;
+$dark-blue: #263248;
+$light-color: #fff;
+$sec-color: #FF9800;
 .contact {
 	background-color: #eee;
 	margin-top: 80px;
@@ -6,5 +12,34 @@
 	}
 	form {
 		padding-bottom: 80px;
+		.form-control {
+			border: 1px solid #ccc;
+	    box-shadow: none;
+	    -moz-box-shadow: none;
+	    color: #333333;
+	    padding: 25px 20px;
+	    border-radius: 0px;
+	    -webkit-border-radius: 0px;
+		}
+		textarea {
+			height:120px;
+		}
+		.def-btn {
+			width: 100%;
+	    background: #ffffff;
+	    font-size: 16px;
+	    border-radius: 0px;
+	    -webkit-border-radius: 0px;
+	    -moz-border-radius: 0px;
+	    border: 1px solid $sec-color;
+    	color: $sec-color;
+
+    	&:hover {
+    	  color: #ffffff;
+    	  background-color: $sec-color;
+
+    	}
+
+		}
 	}
 }

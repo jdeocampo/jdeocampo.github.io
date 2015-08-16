@@ -15,10 +15,14 @@ $sec-color: #FF9800;
 			padding: 20px;
 			position:relative;
 
+			img {
+				width:300px
+			}
+
 			.textbox {
 				margin: 45px;
-				width:296px;
-				height:283px;
+				width:250px;
+				height:245px;
 				position:absolute;
 				top:0;
 				left: 0;	
@@ -37,8 +41,8 @@ $sec-color: #FF9800;
 					transform: scale(1);
 				}
 				.overlay {
-					width:346px;
-					height:333px;
+					width:300px;
+					height:289px;
 			    position:absolute;
 			    background-color:#000;
 			    opacity:0.5;
