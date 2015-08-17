@@ -13,15 +13,8 @@ var typewriteDirective = function ($timeout) {
           textArray,
           running,
           auxStyle;
-
-      if ($scope.text) {
-          if ($scope.text instanceof Array) {
-              textArray = $scope.text;
-              currentText = textArray[0];
-          } else {
-              currentText = $scope.text;
-          }
-      }
+      
+      
       if (typeof $scope.start === 'undefined' || $scope.start) {
           typewrite();
       }
@@ -111,13 +104,21 @@ var typewriteDirective = function ($timeout) {
           }
       });
 
-      $scope.$watch('start', function (newVal) {
+      $scope.$watch('text', function (newVal) {
           if (!running && newVal) {
               running = !running;
               typewrite();
+              if ($scope.text) {
+          if ($scope.text instanceof Array) {
+              textArray = $scope.text;
+              currentText = textArray[0];
+          } else {
+              currentText = $scope.text;
+          }
+      }
           }
       });
-  }
+}
 
   return {
       restrict: 'A',

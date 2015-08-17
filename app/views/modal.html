@@ -1,0 +1,9 @@
+<img ng-src="{{ portfolio.image }}">
+
+<div class="dialog-content">
+	<h2><a ng-href="{{ portfolio.url }}"><i class="fa fa-external-link-square"></i>{{ portfolio.name }}</a></h2>
+	<p>{{ portfolio.description }}</p>
+	<ul class="tags">
+		<li class="tag-item" ng-repeat="tag in portfolio.tags track by $index"><span class="label label-default">{{ tag }}</span></li>
+	</ul>
+</div>

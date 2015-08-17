@@ -1,0 +1,214 @@
+{
+	"name": "Jelly de Ocampo",
+	"profession": "Fullstack developer",
+	"description": [
+		"I discovered my passion for code when I was a senior in High school; it was then when it became clear what I wanted to do for a living. I pursued my career at the amazing University of the East in the Philippines where I started my major in Information Technology. During those years I took a beginner’s Web class where I discovered the love for code. Fortunately, I graduated and was included in the honors list. ",
+		"I was hired by the company I had my internship. My luck seems to lost grip on me. I had a position but not into web development. After trying to justify and weigh options, I left and started the never-ending journey of becoming a web developer along with sharpening my eye for design and interactivity."
+	],
+	"tagline": [
+		"PASSIONATE FULLSTACK DEVELOPER",
+		"EXCELLENT FRONTEND DEVELOPER",
+		"LEAD DEVELOPER"
+	],
+	"social": [
+		{
+			"name": "Facebook",
+			"class": "fb-bg",
+			"icon": "fa fa-facebook",
+			"link": "http://www.facebook.com/imjellyd"
+		}, 
+		{
+			"name": "Twitter",
+			"class": "tweet-bg",
+			"icon": "fa fa-twitter",
+			"link": "http://www.twitter.com/imjellyd"
+		},
+		{
+			"name": "Google",
+			"class": "google-bg",
+			"icon": "fa fa-google",
+			"link": "http://www.google.com/imjellyd"
+		},
+		{
+			"name": "Pinterest",
+			"class": "pin-bg",
+			"icon": "fa fa-pinterest",
+			"link": "http://www.twitter.com/imjellyd"
+		},
+		{
+			"name": "Stack Overflow",
+			"class": "so-bg",
+			"icon": "fa fa-stack-overflow",
+			"link": "http://www.twitter.com/imjellyd"
+		},
+		{
+			"name": "Email",
+			"class": "email-bg",
+			"icon": "fa fa-envelope-o",
+			"link": "http://www.twitter.com/imjellyd"
+		},
+		{
+			"name": "Youtube",
+			"class": "yt-bg",
+			"icon": "fa fa-youtube",
+			"link": "http://www.twitter.com/imjellyd"
+		},
+		{
+			"name": "Download",
+			"class": "down-bg",
+			"icon": "fa fa-download",
+			"link": "http://www.twitter.com/imjellyd"
+		}
+	],	
+	"stat": {
+		"projects": 10,
+		"clients": 5,
+		"cups": 200
+	},
+	"portfolio": [
+		{
+			"id": "reyman",
+			"name": "Reyman.ph",
+			"url": "http://www.reyman.ph",
+			"description": "FM Reyman Trucking Services Inc. provides trucking/transport services, checking, brokerage and other port services, specializing in handling all kinds of semi-finished and finished steel products such as steel billets, wire rods, steel coils, channels, and other steel products.",
+			"thumbnail": "dist/img/portfolio/reyman.png",
+			"image": "dist/img/portfolio/large/reyman.png",
+			"tags": [
+				"angular.js", "laravel", "mobile development"
+			]
+		},
+		{
+			"id": "avaaz",
+			"name": "Avaaz.org",
+			"url": "www.avaaz.org",
+			"description": "Avaaz—meaning 'voice' in several European, Middle Eastern and Asian languages—launched in 2007 with a simple democratic mission: organize citizens of all nations to close the gap between the world we have and the world most people everywhere want.",
+			"thumbnail": "dist/img/portfolio/avaaz.png",
+			"image": "dist/img/portfolio/large/avaaz.png",
+			"tags": [
+				"React.js", "Ember.js", "PHP", "jQuery"
+			]
+		},
+		{
+			"id": "jvpfi",
+			"name": "jvpfi",
+			"url": "http://jvpfi.nexucloud.com",
+			"description": "Jesuit Volunteers Philippines Foundation Incorporated has Local Chapters in Cagayan de Oro, Davao, Manila, Naga and Zamboanga. Former Jesuit Volunteers continue to embrace the JVP Core Values of Service, Social Justice, Solidarity, Simplicity and Spirituality in their chosen fields and profession. Former Jesuit Volunteers form the Network of Leaders.",
+			"thumbnail": "dist/img/portfolio/jvpfi.png",
+			"image": "dist/img/portfolio/large/jvpfi.png",
+			"tags": [
+				"Wordpress", "HTML/CSS"
+			]
+		},
+		{
+			"id": "throwdown",
+			"name": "Throwdown",
+			"url": "http://www.throwdown.com",
+			"description": "For more than ten years, Throwdown has been the combat sports and functional fitness industries’ leader in innovation, quality and safety. Born in response to the inferior products found throughout the marketplace, Throwdown has continued raise the bar on industry standards and invent new products, while advancing technology and performance for modern hybrid athletes.",
+			"thumbnail": "dist/img/portfolio/throwdown.png",
+			"image": "dist/img/portfolio/large/throwdown.png",
+			"tags": [
+				"MAGENTO", "HTML/CSS"
+			]
+		},
+		{
+			"id": "y2g",
+			"name": "Yards to garden",
+			"url": "http://www.y2g.org",
+			"description": "Yards to Gardens lets you share or find all things gardening. Whether you have extra space in your yard, extra tools in the garage, extra seeds or seedings, or just looking for a space to garden, Y2G makes it easy to share what you’ve got or find what you’re looking for.",
+			"thumbnail": "dist/img/portfolio/y2g.png",
+			"image": "dist/img/portfolio/large/y2g.png",
+			"tags": [
+				"node.js", "express"
+			]
+		},
+		{
+			"id": "poweredbypace",
+			"name": "Powered By Pace",
+			"url": "http://www.irisbook.com",
+			"description": "IRISbook is a boutique album company that works exclusively with professional photographers. We create stunning, handcrafted, fine art albums with the utmost attention to detail and quality. Comprised of photographers and artisans, we have a first-hand understanding of your needs and your desire for excellence.",
+			"thumbnail": "dist/img/portfolio/poweredbypace.png",
+			"image": "dist/img/portfolio/large/poweredbypace.png",
+			"tags": [
+				"angular.js", "Java"
+			]
+		},
+		{
+			"id": "clicksend",
+			"name": "Clicksend",
+			"url": "www.clicksend.us",
+			"description": "ClickSend is a global leader in business communication solutions. Our reputation is built on technical expertise, industry experience, quality support and service reliability. From bulk SMS marketing to mission-critical solutions, if you need a business messaging provider, you've come to the right place.",
+			"thumbnail": "dist/img/portfolio/clicksend.png",
+			"image": "dist/img/portfolio/large/clicksend.png",
+			"tags": [
+				"angular.js", "laravel"
+			]
+		},
+		{
+			"id": "creativejooze",
+			"name": "CreativeJooze Online",
+			"url": "www.creativejoozeonline.org",
+			"description": "An instructional portal designed for exceptionally creative students, driven to strive for academic excellence, specifically in the College of Fine Arts at the Technological University of the Philippines Manila.",
+			"thumbnail": "dist/img/portfolio/creativejooze.png",
+			"image": "dist/img/portfolio/large/creativejoozeonline.png",
+			"tags": [
+				"Joomla", "Moodle", "Joomdle"
+			]
+		},
+		{
+			"id": "enjoin",
+			"name": "ENJOIN COMING SOON",
+			"url": "",
+			"description": "Not yet released - an app that connects people through their interest",
+			"thumbnail": "dist/img/portfolio/enjoin.png",
+			"image": "dist/img/portfolio/large/enjoin.png",
+			"tags": [
+				"jquery", "laravel", "google maps"
+			]
+		}
+	],
+	"experience": [
+		{
+			"role": "Lead Developer",
+			"company": "Clicksend PTY, Ltd",
+			"date": "January 2015 - June 2015",
+			"task": [
+				"Assigned to facilitate the team",
+				"Development of API for frontend consumption",
+				"Development of API and SDKs for client's usage",
+				"Created mockups for frontend",
+				"Delegation of task",
+				"Handles redesigning of existing website and application",
+				"Ensures code quality of team"
+			],
+			"tag": [
+				"PHP", "LARAVEL", "ANGULAR"
+			]
+		},
+		{
+			"role": "Frontend Developer",
+			"company": "AVAAZ",
+			"date": "OCTOBER 2014 - DECEMBER 2014",
+			"task": [
+				"Handles research and development of various framework that will be utilized by the whole organization",
+				"Creates code standards for frontend development",
+				"Handles redesigning and fixing of existing website and application"
+			],
+			"tag": [
+				"PHP", "EMBER.JS", "JQUERY", "ANGULAR", "REACT.JS"
+			]
+		},
+		{
+			"role": "FRONTEND DEVELOPER",
+			"company": "poweredbypace",
+			"date": "JUNE 2014 - OCTOBER 2014",
+			"task": [
+				"Assigned to fix bugs on the newly develop frontend",
+				"Conversion of existing system to use new technology",
+				"Develops various directive and controller for the application"
+			],
+			"tag": [
+				"JAVA", "ANGULAR"
+			]
+		}
+	]
+}

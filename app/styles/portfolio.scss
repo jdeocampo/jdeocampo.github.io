@@ -8,74 +8,88 @@ $sec-color: #FF9800;
 .portfolio {
 	margin-top: 80px;
 
-	.portfolio-container {
+	.portfolio-container, .portfolio-container-more {
 		padding-top: 80px;
 
+		.col-sm-6, .col-xs-12 {
+			margin-bottom: 30px;
+		}
 		.item {
-			padding: 20px;
 			position:relative;
+			overflow: hidden;
 
 			img {
-				width:300px
+				width: 100%;
 			}
+			.item-details {	
+				padding: 3em;
+				position: absolute;
+				text-transform: uppercase;
+				top: 0;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				height: 100%;
+				width: 100%;
+				color: #fff;
+				background-color: rgba(0,0,0,0.7);
 
-			.textbox {
-				margin: 45px;
-				width:250px;
-				height:245px;
-				position:absolute;
-				top:0;
-				left: 0;	
-  			border: 1px solid white;
-				-webkit-transform: scale(0);
-				transform: scale(0);
-				text-align: center;
-				color:white;
-				-webkit-transition: all 0.7s ease;
-				transition: all 0.5s ease;
-				
+				span {
+					height:100%;
+					display:block;
+					border: 1px solid white;
+					padding: 3em;
+					letter-spacing: 3px;
+					-webkit-transition: all 0.7s ease;
+					transition: all 0.7s ease;
+					-webkit-transform:scale(0);
+					transform:scale(0);
+					a {
+						border-radius: 0;
+						display:block;
+						margin: 30px;
+						padding:10px 20px;
+						background-color:white;
+						color: black;
+						text-decoration: none;
+						font-weight: 400;
+						cursor: pointer;
+
+					}
+				}
 			}
 			&:hover {
-				.textbox {
-					-webkit-transform: scale(1);
-					transform: scale(1);
+				.item-details {
+					opacity: 1;
+					-webkit-transition: all 0.7s ease;
+					transition: all 0.7s ease;
+					span {
+						-webkit-transform:scale(1);
+						transform:scale(1);
+					}
 				}
-				.overlay {
-					width:300px;
-					height:289px;
-			    position:absolute;
-			    background-color:#000;
-			    opacity:0.5;
-				}
-			}
-
-			.text {
-				padding-top: 50px;
-				letter-spacing: 3px;
-				font-weight: 300;
-
 			}
 		}
 	}
 	.show-more {
 		&:before {
 			content: "";
-	    width: 100%;
-	    position: absolute;
-	    top: 50%;
-	    border-top: 2px solid #e5e5e5;
-	    left: 0;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			border-top: 2px solid #e5e5e5;
+			left: 0;
 		}
 		.def-btn {
 			padding: 0px 15px;
-    background: #fff;
-    color: #888;
-    position: relative;
-    font-size: 14px;
+			background: #fff;
+			color: #888;
+			position: relative;
+			font-size: 14px;
 			color: $dark-blue;
 			text-decoration: none;
 		}
 	}
-	
+
 }
 

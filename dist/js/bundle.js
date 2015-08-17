@@ -15,15 +15,8 @@ var typewriteDirective = function ($timeout) {
           textArray,
           running,
           auxStyle;
-
-      if ($scope.text) {
-          if ($scope.text instanceof Array) {
-              textArray = $scope.text;
-              currentText = textArray[0];
-          } else {
-              currentText = $scope.text;
-          }
-      }
+      
+      
       if (typeof $scope.start === 'undefined' || $scope.start) {
           typewrite();
       }
@@ -113,13 +106,21 @@ var typewriteDirective = function ($timeout) {
           }
       });
 
-      $scope.$watch('start', function (newVal) {
+      $scope.$watch('text', function (newVal) {
           if (!running && newVal) {
               running = !running;
               typewrite();
+              if ($scope.text) {
+          if ($scope.text instanceof Array) {
+              textArray = $scope.text;
+              currentText = textArray[0];
+          } else {
+              currentText = $scope.text;
+          }
+      }
           }
       });
-  }
+}
 
   return {
       restrict: 'A',
@@ -142,7 +143,12 @@ module.exports = typewriteDirective;
 
   var typewriteDirective = require('./directives/imjellyd-typewrite'); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
-  angular.module('imjellydApp', ['ngRoute', 'ngAnimate'])
+  // $('.portfolio-container-more').hide();
+  // $('.portfolio .def-btn').click(function() {
+  //   $('.portfolio-container-more').show();
+  //   $('.show-more').hide();
+  // });
+  angular.module('imjellydApp', ['ngRoute', 'ngAnimate', 'ngDialog'])
   .config([
     '$locationProvider',
     '$routeProvider',
@@ -160,15 +166,42 @@ module.exports = typewriteDirective;
     }
   ])
 
+  .factory('imjellydService', function($http, $q) {
+    var deffered = $q.defer();
+    var data = [];  
+    var imjellydService = {};
+
+    imjellydService.async = function() {
+      $http.get('imjellyd.json')
+      .success(function (d) {
+        data = d;
+        deffered.resolve();
+      });
+      return deffered.promise;
+    };
+    imjellydService.data = function() { return data; };
+
+    return imjellydService;
+  })
   //Load controller
-  .controller('MainController', function($scope) {
-      $scope.test = "Testing...";
+  .controller('MainController', function($scope, ngDialog, imjellydService ) {
+    $scope.portfolioLimit = 6;
+    imjellydService.async().then(function() {
+      $scope.data = imjellydService.data();
+    });
+    $scope.clickToOpen = function (index) {
+      $scope.portfolio = $scope.data.portfolio[index];
+      ngDialog.open({
+        template: "dist/views/modal.html",
+        scope: $scope
+      });
+    };
   })
 
   .directive('typewrite',['$timeout', typewriteDirective]);
 
 }());
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_5508c2c9.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_1890ac06.js","/")
 },{"./directives/imjellyd-typewrite":1,"buffer":3,"oMfpAn":6}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
