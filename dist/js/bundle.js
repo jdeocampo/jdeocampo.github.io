@@ -143,11 +143,16 @@ module.exports = typewriteDirective;
 
   var typewriteDirective = require('./directives/imjellyd-typewrite'); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
-  // $('.portfolio-container-more').hide();
-  // $('.portfolio .def-btn').click(function() {
-  //   $('.portfolio-container-more').show();
-  //   $('.show-more').hide();
-  // });
+  function scrollToAnchor(aid){
+    var aTag = $(aid);
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  }
+
+  $('.nav a, .scroll-info a, #acontact').click(function(e) {
+    e.preventDefault();
+    scrollToAnchor($(this).attr("href"));
+  });
+
   angular.module('imjellydApp', ['ngRoute', 'ngAnimate', 'ngDialog'])
   .config([
     '$locationProvider',
@@ -184,7 +189,7 @@ module.exports = typewriteDirective;
     return imjellydService;
   })
   //Load controller
-  .controller('MainController', function($scope, ngDialog, imjellydService ) {
+  .controller('MainController', function($scope, $http, ngDialog, imjellydService ) {
     $scope.portfolioLimit = 6;
     imjellydService.async().then(function() {
       $scope.data = imjellydService.data();
@@ -196,12 +201,38 @@ module.exports = typewriteDirective;
         scope: $scope
       });
     };
+
+    $scope.sendContactUs = function() {
+      $http({
+        url: "http://formspree.io/me@imjellyd.com",
+        data: $.param({
+            _replyto: $scope.email,
+            _subject: "Email inquiry from " + $scope.subject,
+            _cc: 'jellydeocampo@icloud.com',
+            message: $scope.message
+        }),
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).then(function() {
+         ngDialog.open({
+        template: "dist/views/thankyou.html",
+        preCloseCallback: function(){ 
+          $scope.message = "";
+          $scope.email = "";
+          $scope.subject = "";
+        }
+      });
+      });
+    };
   })
 
   .directive('typewrite',['$timeout', typewriteDirective]);
 
 }());
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_1890ac06.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_5b363886.js","/")
 },{"./directives/imjellyd-typewrite":1,"buffer":3,"oMfpAn":6}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!

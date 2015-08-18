@@ -13,19 +13,19 @@ $sec-color: #FF9800;
 	border-color: transparent;
 
 	@media screen and (max-width: $break-small) {
-    background-color: white;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-   }
+		background-color: white;
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+	}
 
 	.navbar-nav {
 		li {
 			a {
 				color: $light-color;
-		    font-size: 12px;
-		    text-transform: uppercase;
-		    font-weight: 400;
-		    padding: 30px 20px;
-		    letter-spacing: 1px;
+				font-size: 12px;
+				text-transform: uppercase;
+				font-weight: 400;
+				padding: 30px 20px;
+				letter-spacing: 1px;
 			}
 
 			&.active, &.active:hover {
@@ -34,24 +34,24 @@ $sec-color: #FF9800;
 				}
 			}
 			@media screen and (max-width: $break-small) {
-    		a {
+				a {
 					color: $dark-blue;
-			    font-size: 12px;
-			    text-transform: uppercase;
-			    font-weight: 400;
-			    letter-spacing: 1px;
-			    padding: 15px 20px;
-			    &:hover {
-			    	background-color:	 $sec-color;
+					font-size: 12px;
+					text-transform: uppercase;
+					font-weight: 400;
+					letter-spacing: 1px;
+					padding: 15px 20px;
+					&:hover {
+						background-color:	 $sec-color;
 						color: $light-color;
-			    }
+					}
 				}
 				&.active, &.active:hover {
 					a {
 						color: $sec-color;
 					}
 				}
-   		}
+			}
 		}
 	}
 
@@ -62,29 +62,29 @@ $sec-color: #FF9800;
 		.icon-bar {
 			background-color: $sec-color;
 		}
-		
+
 		&:hover, &:focus {
 			background-color: $sec-color;
 			.icon-bar {
 				background-color: $light-color;
 			}
 		}
-		
+
 	}
 
 	.navbar-brand {
-    color: #ffffff;
-    padding: 0px;
-    line-height: 0px;
-    width: 100px;
-    height: 40px;
-    background: url("../img/logo-40x40.png") no-repeat center;
-    margin: 20px 0px;
+		color: #ffffff;
+		padding: 0px;
+		line-height: 0px;
+		width: 100px;
+		height: 40px;
+		background: url("../img/logo-40x40.png") no-repeat center;
+		margin: 20px 0px;
 
-    @media screen and (max-width: $break-small) {
-    	margin-left: 20px;
-    	background: url("../img/logo-dark-40x40.png") no-repeat center;
-    }
+		@media screen and (max-width: $break-small) {
+			margin-left: 20px;
+			background: url("../img/logo-dark-40x40.png") no-repeat center;
+		}
 	}
 
 	.navbar-collapse {
@@ -92,7 +92,7 @@ $sec-color: #FF9800;
 	}
 }
 .banner {
-	background: url('../img/banner-2.png') center;
+	background: url('../img/banner-1.jpg') center;
 	background-size: cover;
 	height: 100vh;
 	width: 100%;
@@ -109,105 +109,113 @@ $sec-color: #FF9800;
 	}
 
 	.banner-content {
-	  position: relative;
-    z-index: 2;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    color: $light-color;
+		position: relative;
+		z-index: 2;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: $light-color;
 
-    .subtitle {
-    	text-align: center;
-	    margin: 0 auto;
-	    font-size: 24px;
-	    margin-top: 20px;
-	    line-height: 35px;
-	    text-transform: uppercase;
-	    font-weight: 300;
-	    letter-spacing: 2px;
-	    display: inline-block;
-	    position: relative;
-	    margin-bottom: 15px;
-    }
-    @media screen and (max-width: $break-small) {
-    	.subtitle {
-    		font-size: 18px;
-    	}
-    }
-
-
-    .title {
-    	width: 80%;
-    	text-align: center;
-    	margin: 0 auto;
-    	min-height: 40px;
-    	h1 {
-    		font-weight: 700;
-		    font-size: 40px;
-		    color: #ffffff;
-		    margin-top: 0px;
-		    text-transform: uppercase;
-		    font-weight: 300;
-		    letter-spacing: 10px;
-		    display: inline-block;
-
-    	}
-    	@media screen and (max-width: $break-small) {
-    		h1 {
-    			font-size: 30px;
-    		}
+		.subtitle {
+			text-align: center;
+			margin: 0 auto;
+			font-size: 24px;
+			margin-top: 20px;
+			line-height: 35px;
+			text-transform: uppercase;
+			font-weight: 300;
+			letter-spacing: 2px;
+			display: inline-block;
+			position: relative;
+			margin-bottom: 15px;
+		}
+		@media screen and (max-width: $break-small) {
+			.subtitle {
+				font-size: 18px;
 			}
-    }
+		}
 
-    .buttons {
-    	display: inline-block;
-    }
 
-    .def-btn {
-    	border-radius: 0px;
-	    -webkit-border-radius: 0px;
-	    -moz-border-radius: 0px;
-	    margin-right: 15px;
-	    font-weight: 700;
-	    border: 0px;
-	    padding: 10px 5px;
-	    border-bottom: 1px solid $light-color;
-    }
+		.title {
+			width: 80%;
+			text-align: center;
+			margin: 0 auto;
+			min-height: 40px;
+			h1 {
+				font-weight: 700;
+				font-size: 40px;
+				color: #ffffff;
+				margin-top: 0px;
+				text-transform: uppercase;
+				font-weight: 300;
+				letter-spacing: 10px;
+				display: inline-block;
 
-    .scroll-info {
-    	position: absolute;
-	    bottom: 15%;
-	    text-align: center;
-	    width: 100%;
-	    a {
-	    	color: $light-color;
-	    	.shape {
-	    		display: inline-block;
-			    border: 1px solid #ffffff;
-			    width: 35px;
-			    height: 35px;
-			    transform: rotate(45deg);
-			    -webkit-transform: rotate(45deg);
-			    -moz-transform: rotate(45deg);
-			    -o-transform: rotate(45deg);
-			    -ms-transform: rotate(45deg);
-			    -webkit-transition: all 0.3s ease-in-out;
-			    -moz-transition: all 0.3s ease-in-out;
-			    -ms-transition: all 0.3s ease-in-out;
-			    -o-transition: all 0.3s ease-in-out;
-			    text-align: center;
-			    position: relative;
-			    z-index: 3;
-			    i {
-			    	transform: rotate(-45deg);
-    				-webkit-transform: rotate(-45deg);
-    				padding: 8px;
-				    font-size: 18px;
-				    color: #ffffff;
-			    }
-	    	}
-	    }
-	    
-    }
+			}
+			@media screen and (max-width: $break-small) {
+				h1 {
+					font-size: 30px;
+				}
+			}
+		}
+
+		.buttons {
+			display: inline-block;
+
+			a {
+				text-decoration: none;
+				&:hover {
+					color: white;
+					text-decoration: none; 
+				}
+			}
+		}
+
+		.def-btn {
+			border-radius: 0px;
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			margin-right: 15px;
+			font-weight: 700;
+			border: 0px;
+			padding: 10px 5px;
+			border-bottom: 1px solid $light-color;
+		}
+
+		.scroll-info {
+			position: absolute;
+			bottom: 15%;
+			text-align: center;
+			width: 100%;
+			a {
+				color: $light-color;
+				.shape {
+					display: inline-block;
+					border: 1px solid $light-color;
+					width: 35px;
+					height: 35px;
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					-moz-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					-webkit-transition: all 0.3s ease-in-out;
+					-moz-transition: all 0.3s ease-in-out;
+					-ms-transition: all 0.3s ease-in-out;
+					-o-transition: all 0.3s ease-in-out;
+					text-align: center;
+					position: relative;
+					z-index: 3;
+					i {
+						transform: rotate(-45deg);
+						-webkit-transform: rotate(-45deg);
+						padding: 8px;
+						font-size: 18px;
+						color: $light-color;
+					}
+				}
+			}
+
+		}
 	}
 }

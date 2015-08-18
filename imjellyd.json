@@ -6,9 +6,10 @@
 		"I was hired by the company I had my internship. My luck seems to lost grip on me. I had a position but not into web development. After trying to justify and weigh options, I left and started the never-ending journey of becoming a web developer along with sharpening my eye for design and interactivity."
 	],
 	"tagline": [
-		"PASSIONATE FULLSTACK DEVELOPER",
-		"EXCELLENT FRONTEND DEVELOPER",
-		"LEAD DEVELOPER"
+		"A FREELANCER",
+		"A LEAD DEVELOPER",
+		"A FRONTEND DEVELOPER",
+		"INTO FULLSTACK DEVELOPMENT"
 	],
 	"social": [
 		{
@@ -27,37 +28,37 @@
 			"name": "Google",
 			"class": "google-bg",
 			"icon": "fa fa-google",
-			"link": "http://www.google.com/imjellyd"
+			"link": "https://plus.google.com/116607220685936083240"
 		},
 		{
 			"name": "Pinterest",
 			"class": "pin-bg",
 			"icon": "fa fa-pinterest",
-			"link": "http://www.twitter.com/imjellyd"
+			"link": "http://www.pinterest.com/imjellyd"
 		},
 		{
 			"name": "Stack Overflow",
 			"class": "so-bg",
 			"icon": "fa fa-stack-overflow",
-			"link": "http://www.twitter.com/imjellyd"
+			"link": "http://stackoverflow.com/users/3003157/jellyfication"
 		},
 		{
 			"name": "Email",
 			"class": "email-bg",
 			"icon": "fa fa-envelope-o",
-			"link": "http://www.twitter.com/imjellyd"
+			"link": "mailto::me@imjellyd.com"
 		},
 		{
 			"name": "Youtube",
 			"class": "yt-bg",
 			"icon": "fa fa-youtube",
-			"link": "http://www.twitter.com/imjellyd"
+			"link": "https://www.youtube.com/channel/UC2AV4XpHPVkFxHJm5UNM9YQ"
 		},
 		{
 			"name": "Download",
 			"class": "down-bg",
 			"icon": "fa fa-download",
-			"link": "http://www.twitter.com/imjellyd"
+			"link": ""
 		}
 	],	
 	"stat": {
