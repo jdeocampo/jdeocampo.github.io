@@ -140,7 +140,7 @@ module.exports = typewriteDirective;
 (function () {
 
   'use strict';
-
+  $('body').bind('touchstart', function() {});
   var typewriteDirective = require('./directives/imjellyd-typewrite'); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
   function scrollToAnchor(aid){
@@ -236,7 +236,7 @@ module.exports = typewriteDirective;
   .directive('typewrite',['$timeout', typewriteDirective]);
 
 }());
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_995f25d3.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_2ebc972a.js","/")
 },{"./directives/imjellyd-typewrite":1,"buffer":3,"oMfpAn":6}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!

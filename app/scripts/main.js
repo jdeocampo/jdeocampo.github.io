@@ -1,7 +1,7 @@
 (function () {
 
   'use strict';
-
+  $('body').bind('touchstart', function() {});
   var typewriteDirective = require('./directives/imjellyd-typewrite'); // We can use our WelcomeCtrl.js as a module. Rainbows.
 
   function scrollToAnchor(aid){
