@@ -58,7 +58,7 @@ $sec-color: #FF9800;
 					}
 				}
 			}
-			&:hover {
+			&:hover, &:focus {
 				.item-details {
 					opacity: 1;
 					-webkit-transition: all 0.7s ease;
