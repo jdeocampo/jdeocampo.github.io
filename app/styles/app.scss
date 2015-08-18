@@ -119,7 +119,9 @@ body {
 }
 
 .ngdialog {
+
  &.ngdialog-theme-default {
+    padding-top: 80px;
     .ngdialog-content{
       padding: 0 !important;
       img {
