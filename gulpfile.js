@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    minifycss = require('gulp-minify-css');
+    minifycss = require('gulp-minify-css'),
+    minify = require('gulp-minify');
 
 // Modules for webserver and livereload
 var express = require('express'),
@@ -67,6 +68,7 @@ gulp.task('browserify', function() {
     debug: false
   }))
   .pipe(concat('bundle.js'))
+  .pipe(minify())
   .pipe(gulp.dest('dist/js'));
 });
 
