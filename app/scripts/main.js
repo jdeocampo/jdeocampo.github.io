@@ -65,30 +65,32 @@
       });
     };
 
-    $scope.sendContactUs = function() {
-      $http({
-        url: "http://formspree.io/me@imjellyd.com",
-        data: $.param({
-            _replyto: $scope.email,
-            _subject: "Email inquiry from " + $scope.subject,
-            _cc: 'jellydeocampo@icloud.com',
-            message: $scope.message
-        }),
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      }).then(function() {
-         ngDialog.open({
-        template: "dist/views/thankyou.html",
-        preCloseCallback: function(){ 
-          $scope.message = "";
-          $scope.email = "";
-          $scope.subject = "";
-        }
-      });
-      });
+    $scope.sendContactUs = function(isValid) {
+      if (isValid) {
+        $http({
+          url: "http://formspree.io/me@imjellyd.com",
+          data: $.param({
+              _replyto: $scope.email,
+              _subject: "Email inquiry from " + $scope.subject,
+              _cc: 'jellydeocampo@icloud.com',
+              message: $scope.message
+          }),
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded'
+          }
+        }).then(function() {
+           ngDialog.open({
+          template: "dist/views/thankyou.html",
+          preCloseCallback: function(){ 
+            $scope.message = "";
+            $scope.email = "";
+            $scope.subject = "";
+          }
+        });
+        });
+      }
     };
   })
 
