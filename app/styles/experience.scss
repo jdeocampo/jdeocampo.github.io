@@ -39,6 +39,7 @@ $sec-color: #FF9800;
 		.item {
 			margin: 10px 0;
 			
+
 			h2 {
 				font-family: "Oswald";
 				font-weight: 350;
@@ -54,6 +55,14 @@ $sec-color: #FF9800;
 			    float: right;
 			    font-style: italic;
 		    }
+			}
+			@media screen and (max-width: $break-small) {
+				h2 {
+					margin-top: 30px;
+					.data {
+						display:none;
+					}
+				}
 			}
 			.experience-li {
 				color: #616265;
@@ -71,5 +80,12 @@ $sec-color: #FF9800;
 			}
 		}
 	}
-
 }
+@media screen and (max-width: $break-small) {
+		.resume {
+			margin: 20px 0;
+			.list-experience {
+				padding: 20px 0;
+			}
+		}
+	}

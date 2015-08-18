@@ -14,6 +14,8 @@
     scrollToAnchor($(this).attr("href"));
   });
 
+  new WOW().init();
+
   angular.module('imjellydApp', ['ngRoute', 'ngAnimate', 'ngDialog'])
   .config([
     '$locationProvider',
