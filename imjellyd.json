@@ -32,7 +32,7 @@
 		},
 		{
 			"name": "Email",
-			"class": "email-bg hidden-xs",
+			"class": "email-bg",
 			"icon": "fa fa-envelope-o",
 			"link": "mailto::me@imjellyd.com"
 		},
@@ -44,7 +44,7 @@
 		},
 		{
 			"name": "Download",
-			"class": "down-bg hidden-xs",
+			"class": "down-bg",
 			"icon": "fa fa-download",
 			"link": "/me.pdf"
 		}
