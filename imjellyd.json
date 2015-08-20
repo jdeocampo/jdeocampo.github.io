@@ -13,18 +13,6 @@
 	],
 	"social": [
 		{
-			"name": "Facebook",
-			"class": "fb-bg",
-			"icon": "fa fa-facebook",
-			"link": "http://www.facebook.com/imjellyd"
-		}, 
-		{
-			"name": "Twitter",
-			"class": "tweet-bg",
-			"icon": "fa fa-twitter",
-			"link": "http://www.twitter.com/imjellyd"
-		},
-		{
 			"name": "Google",
 			"class": "google-bg",
 			"icon": "fa fa-google",
@@ -150,7 +138,7 @@
 			"url": "www.creativejoozeonline.org",
 			"description": "An instructional portal designed for exceptionally creative students, driven to strive for academic excellence, specifically in the College of Fine Arts at the Technological University of the Philippines Manila.",
 			"thumbnail": "dist/img/portfolio/creativejooze.png",
-			"image": "dist/img/portfolio/large/creativejoozeonline.png",
+			"image": "dist/img/portfolio/large/creativejoozeonline.jpg",
 			"tags": [
 				"Joomla", "Moodle", "Joomdle"
 			]
